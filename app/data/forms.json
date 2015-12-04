@@ -27,7 +27,11 @@
   "questions": [{
     "text": "What is your name?",
     "type": "text",
-    "pattern": "\\w*\\s\\w*"
+    "required": true,
+    "pattern": "[A-Z][a-z]*\\s[A-Z][a-z]*",
+    "errors": {
+      "pattern": "Name is not in correct format, 'First Last'."
+    }
   },{
     "text": "What is your favorite color?",
     "type": "text"

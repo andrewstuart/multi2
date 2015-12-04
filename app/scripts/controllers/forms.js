@@ -26,7 +26,6 @@ angular.module('multi2App')
 
     storage.load(formUrl)
       .then(function(a) {
-        console.log(a);
         $scope.answers = a;
 
       }).finally(function() {
