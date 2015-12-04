@@ -18,7 +18,7 @@ angular.module('multi2App')
    * @description `list` is a property to expose the forms retrieved from the
    * backend.
    */
-  $http.get('/data/forms.json')
+  $http.get('data/forms.json')
   .then(function(res) {
     forms.list = res.data;
   });

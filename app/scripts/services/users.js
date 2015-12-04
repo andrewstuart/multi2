@@ -11,7 +11,7 @@ angular.module('multi2App')
   .service('users', function ($http) {
     var users = this;
 
-    $http.get('/data/users.json')
+    $http.get('data/users.json')
       .then(function(res) {
         users.list = res.data;
       });
