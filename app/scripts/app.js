@@ -21,11 +21,11 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/users/:userId/forms/:formId?/:q?', {
-        templateUrl: 'views/forms.html',
+        templateUrl: '/views/forms.html',
         controller: 'FormsCtrl'
       })
       .when('/users/:id?', {
-        templateUrl: 'views/users.html',
+        templateUrl: '/views/users.html',
         controller: 'UsersCtrl'
       })
       .otherwise({
