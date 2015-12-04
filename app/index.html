@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Form App</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,17 +20,13 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div ng-include="/views/navbar.html"></div>
-    </div>
+    <div ng-include="'/views/partials/navbar.html'"></div>
 
-    <div class="container">
     <div ng-view=""></div>
-    </div>
 
     <div class="footer">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p>Created by Andrew Stuart</p>
       </div>
     </div>
 
@@ -58,6 +54,9 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/crypto-js/index.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -65,6 +64,11 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/forms.js"></script>
+        <script src="scripts/services/forms.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/services/users.js"></script>
+        <script src="scripts/services/storage.js"></script>
         <!-- endbuild -->
 </body>
 </html>

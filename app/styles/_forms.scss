@@ -1,0 +1,9 @@
+input, select {
+  &.ng-invalid {
+    box-shadow: 0 0 10px transparentize(red, 0.5);
+
+    &.ng-invalid-required {
+      box-shadow: 0 0 10px transparentize(orange, 0.5);
+    }
+  }
+}

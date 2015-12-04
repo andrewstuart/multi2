@@ -1,0 +1,45 @@
+[{
+  "title": "Sample Assessment",
+  "questions": [{
+    "text": "What is your occupation?",
+    "type": "text"
+  },{
+    "text": "In general, you would say your health is:",
+    "type": "select",
+    "options": [
+      "Excellent",
+      "Very Good",
+      "Good",
+      "Fair",
+      "Poor"
+    ]
+  }, {
+    "text": "What is your gender?",
+    "required": true,
+    "type": "select",
+    "options": [
+      "Male",
+      "Female"
+    ]
+  }]
+},{
+  "title": "Sample Assessment 2",
+  "questions": [{
+    "text": "What is your name?",
+    "type": "text",
+    "pattern": "\\w*\\s\\w*"
+  },{
+    "text": "What is your favorite color?",
+    "type": "text"
+  },{
+    "text": "What is your quest?",
+    "type": "select",
+    "options": [
+      "To find the holy grail"
+    ]
+  },{
+    "text": "Why?",
+    "required": true,
+    "type": "text"
+  }]
+}]

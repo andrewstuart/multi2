@@ -1,0 +1,38 @@
+<div class="container">
+  <div ng-if="!forms.list[ri.formId]">
+    <div class="panel panel-default" ng-repeat="form in forms.list">
+      <header class="panel-heading">
+        <a ng-href="#/users/{{ri.userId}}/forms/{{$index}}">
+          <span class="form">Form {{$index + 1}}</span>
+          <span class="title"> {{form.title}} </span>
+        </a>
+      </header>
+      {{form.questions.length}} Questions
+    </div>
+  </div>
+
+  <div ng-if="forms.list[ri.formId]">
+    <h1>
+      {{forms.list[ri.formId].title}}
+      <span class="glyphicon glyphicon-check" ng-if="form.$valid"></span>
+    </h1>
+    <form name="form" class="form-horizontal">
+      <div ng-repeat="q in forms.list[ri.formId].questions" class="row">
+        <div class="form-group form-group-sm">
+          <label class="col-sm-2 control-label" for="input-{{$index}}">{{$index+1}}. {{q.text}}</label>
+          <div class="col-sm-9" ng-switch="q.type">
+            <select ng-switch-when="select" class="form-control" id="input-{{$index}}" ng-required="o.required" ng-model="answers[$index]" ng-options="o for o in q.options"></select>
+            <input ng-switch-default id="input-{{$index}}" ng-pattern="q.pattern" ng-required="q.required" class="form-control" ng-model="answers[$index]" type="{{q.type}}"></input>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div ng-if="forms.list[ri.formId][ri.questionId]">
+  </div>
+
+  <footer class="pull-right">
+    The current user is {{users.list[ri.userId].name || 'unknown'}}.
+  </footer>
+</div>

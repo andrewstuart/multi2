@@ -20,15 +20,15 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+      .when('/users/:userId/forms/:formId?/:q?', {
+        templateUrl: 'views/forms.html',
+        controller: 'FormsCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/users/:id?', {
+        templateUrl: 'views/users.html',
+        controller: 'UsersCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/users'
       });
   });
